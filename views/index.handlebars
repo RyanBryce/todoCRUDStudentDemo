@@ -1,0 +1,30 @@
+<div>
+  <h1>TO DO App</h1>
+  <h4>not complete</h4>
+  <hr>
+  {{#each todos}}
+    <div>
+      {{#unless completed}}
+        <p> TODO: {{this.todo}}</p>
+        <button data-id={{this.id}} class="complete">complete</button>
+        <hr>
+      {{/unless}}
+    </div>
+  {{/each}}
+  <h4>completed</h4>
+  <hr>
+  {{#each todos}}
+    <div>
+    
+      {{#if completed}}
+        <p>{{this.todo}}</p>
+        <button data-id={{this.id}} class="delete">delete</button>
+        <hr>
+      {{/if}}
+    </div>
+  {{/each}}
+  <hr>
+  <h4>add a to do</h4>
+  <input type="text" id="todo">
+  <button id='addTodo'>add todo</button>
+</div>
